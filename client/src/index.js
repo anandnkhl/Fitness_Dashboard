@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import { Auth0Provider } from "@auth0/auth0-react";
 import * as serviceWorker from './serviceWorker';
+import Routes from './routes'
+
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientId = process.env.REACT_APP_CLIENTID
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Auth0Provider
+    domain = {domain}
+    clientId = {clientId}
+    redirectUri={"http://localhost:3000/#/FitnessDashboard"}
+  >
+    <Routes />
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
