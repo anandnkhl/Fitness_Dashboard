@@ -1,23 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Router } from "react-router-dom";
 import './index.css';
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider } from "./components/Auth/react-auth0-spa";
+import history from "./utils/history";
+import { AUTH_CONFIG } from "./components/Auth/auth0-variables";
 import * as serviceWorker from './serviceWorker';
-import Routes from './routes'
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_CLIENTID
 
-ReactDOM.render(
-  <Auth0Provider
-    domain = {domain}
-    clientId = {clientId}
-    redirectUri={"http://localhost:3000/#/FitnessDashboard"}
-  >
-    <Routes />
-  </Auth0Provider>,
-  document.getElementById('root')
+const onRedirectCallback = appState => {
+  history.push(
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  );
+};
+
+const mainRoutes = (
+  <Router history={history}>
+    <Route
+      path="/"
+      render={props => (
+        <Auth0Provider
+          domain={AUTH_CONFIG.domain}
+          client_id={AUTH_CONFIG.clientId}
+          redirect_uri={AUTH_CONFIG.callbackUrl}
+          onRedirectCallback={onRedirectCallback}
+        />
+      )}
+    />
+  </Router>
 );
+
+ReactDOM.render(mainRoutes, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
