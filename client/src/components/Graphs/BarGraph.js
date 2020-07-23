@@ -10,8 +10,7 @@ import { Spring } from 'react-spring/renderprops';
 function BarGraph(props) { 
     const width = 500;  
     const height = 300;
-    const data = props.data; 
-    console.log(data);
+    const data = props.data;
     let unit = 1;
         if(window.screen.width > 1910 && window.screen.width < 2550){
             //for FHD Screens
