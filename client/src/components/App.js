@@ -37,7 +37,7 @@ function App({ idToken }) {
 		<ApolloProvider client={client}>
 		<div className = "overlay-message">
 			<Header logoutHandler={logout} />
-			<MyInfoQuery />
+			<MyInfoQuery idToken={idToken}/>
 		</div>
 		</ApolloProvider>
 	);
