@@ -33,6 +33,7 @@ function App({ idToken }) {
 		return <div>Loading...</div>;
 	}
 	const client = createApolloClient(idToken);
+	console.log(idToken);
 	return (
 		<ApolloProvider client={client}>
 		<div className = "overlay-message">
