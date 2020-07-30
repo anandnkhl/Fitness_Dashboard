@@ -31,12 +31,12 @@ const MyStepsCount = ({idToken}) => {
 	
     return(
         <div>
-			<br/>
-			<div className="message">
+			<div className="message" style={{textAlign:"center"}}>
 				{
 					stepsCountDisplay
 				}
 			</div>
+			<br/>
 			<PieChart data={dataForPie}/>
         </div>
     )
