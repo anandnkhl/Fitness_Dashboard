@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
-const bearerToken = require("./getAuthToken")
 
 const app = express();
 
@@ -18,7 +17,7 @@ mutation ($username: String! $incrementer: Int!){
 `;
 
 // execute the parent operation in Hasura
-const execute = async (variables) => {
+const execute = async (variables, userToken) => {
   const fetchResponse = await fetch(
     "https://relaxed-pig-38.hasura.app/v1/graphql",
     {
@@ -28,12 +27,11 @@ const execute = async (variables) => {
         variables
       }),
       headers: {
-        Authorization: `Bearer ${bearerToken}`,
+        Authorization: `Bearer ${userToken}`,
       }
     });
     
   const data = await fetchResponse.json();
-  console.log('DEBUG: ', data);
   return data;
 };
   
@@ -43,11 +41,10 @@ app.post('/UpdateStepscountDerived', async (req, res) => {
 
   // get request input
   const { username, incrementer } = req.body;
-
-  // run some business logic
+  const userToken = req.headers.usertoken;
 
   // execute the Hasura operation
-  const { data, errors } = await execute({ username , incrementer });
+  const { data, errors } = await execute({ username , incrementer }, userToken);
 
   // if Hasura operation errors, then throw error
   if (errors) {
