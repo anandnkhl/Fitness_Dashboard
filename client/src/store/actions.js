@@ -1,0 +1,1 @@
+export const UPDATE_USER_TOKEN = 'UPDATE_USER_TOKEN'
