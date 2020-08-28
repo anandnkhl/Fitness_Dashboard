@@ -8,6 +8,10 @@ import * as serviceWorker from './serviceWorker';
 
 require('dotenv').config()
 console.log(process.env.NODE_ENV);
+let redirectURI = process.env.REACT_APP_AUTH_CALLBACKURL;
+if(process.env.NODE_ENV == 'production'){
+  redirectURI = process.env.REACT_APP_AUTH_CALLBACKURL_PROD;
+}
 
 const onRedirectCallback = appState => {
   history.push(
@@ -25,7 +29,7 @@ const mainRoutes = (
         <Auth0Provider
           domain={process.env.REACT_APP_AUTH_DOMAIN}
           client_id={process.env.REACT_APP_AUTH_CLIENTID}
-          redirect_uri={process.env.REACT_APP_AUTH_CALLBACKURL}
+          redirect_uri={redirectURI}
           onRedirectCallback={onRedirectCallback}
         />
       )}
