@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3983b04245c90d71d9aaee12509cc08d",
+    "revision": "fc0d604fa3df21d415a274f989b3078d",
     "url": "/Fitness_Dashboard/index.html"
   },
   {
-    "revision": "6bbb3f69b0a6be5d164b",
+    "revision": "120ed1837e9d5b76785f",
     "url": "/Fitness_Dashboard/static/css/main.8ed4fd2d.chunk.css"
   },
   {
-    "revision": "de6a3a2efd83aced6886",
-    "url": "/Fitness_Dashboard/static/js/2.600324e0.chunk.js"
+    "revision": "0ead421eb30f92a9afc0",
+    "url": "/Fitness_Dashboard/static/js/2.541a1438.chunk.js"
   },
   {
     "revision": "b5901214077ea32a7534a1d4eff7c84a",
-    "url": "/Fitness_Dashboard/static/js/2.600324e0.chunk.js.LICENSE.txt"
+    "url": "/Fitness_Dashboard/static/js/2.541a1438.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6bbb3f69b0a6be5d164b",
-    "url": "/Fitness_Dashboard/static/js/main.b7fa8a1a.chunk.js"
+    "revision": "120ed1837e9d5b76785f",
+    "url": "/Fitness_Dashboard/static/js/main.3c6d2791.chunk.js"
   },
   {
     "revision": "6900fcfeb66ab888cc45",
