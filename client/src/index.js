@@ -7,7 +7,7 @@ import history from "./utils/history";
 import * as serviceWorker from './serviceWorker';
 
 require('dotenv').config()
-console.log(process.env.REACT_APP_AUTH_DOMAIN);
+console.log(process.env.NODE_ENV);
 
 const onRedirectCallback = appState => {
   history.push(
