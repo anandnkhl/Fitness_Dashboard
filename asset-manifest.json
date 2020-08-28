@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Fitness_Dashboard/static/css/main.8ed4fd2d.chunk.css",
-    "main.js": "/Fitness_Dashboard/static/js/main.72f3a604.chunk.js",
-    "main.js.map": "/Fitness_Dashboard/static/js/main.72f3a604.chunk.js.map",
+    "main.js": "/Fitness_Dashboard/static/js/main.300b23dd.chunk.js",
+    "main.js.map": "/Fitness_Dashboard/static/js/main.300b23dd.chunk.js.map",
     "runtime-main.js": "/Fitness_Dashboard/static/js/runtime-main.ec792a7e.js",
     "runtime-main.js.map": "/Fitness_Dashboard/static/js/runtime-main.ec792a7e.js.map",
     "static/js/2.5a7b7d0e.chunk.js": "/Fitness_Dashboard/static/js/2.5a7b7d0e.chunk.js",
     "static/js/2.5a7b7d0e.chunk.js.map": "/Fitness_Dashboard/static/js/2.5a7b7d0e.chunk.js.map",
     "index.html": "/Fitness_Dashboard/index.html",
-    "precache-manifest.1ba280636c1b2657f44c4bfcdddcca59.js": "/Fitness_Dashboard/precache-manifest.1ba280636c1b2657f44c4bfcdddcca59.js",
+    "precache-manifest.fd701816d0ea386fbd54a60a9376419f.js": "/Fitness_Dashboard/precache-manifest.fd701816d0ea386fbd54a60a9376419f.js",
     "service-worker.js": "/Fitness_Dashboard/service-worker.js",
     "static/css/main.8ed4fd2d.chunk.css.map": "/Fitness_Dashboard/static/css/main.8ed4fd2d.chunk.css.map",
     "static/js/2.5a7b7d0e.chunk.js.LICENSE.txt": "/Fitness_Dashboard/static/js/2.5a7b7d0e.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ec792a7e.js",
     "static/js/2.5a7b7d0e.chunk.js",
     "static/css/main.8ed4fd2d.chunk.css",
-    "static/js/main.72f3a604.chunk.js"
+    "static/js/main.300b23dd.chunk.js"
   ]
 }
